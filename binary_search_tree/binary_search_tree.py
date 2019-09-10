@@ -74,12 +74,14 @@ class BinarySearchTree:
             self.right.for_each(cb)
 
 
-bst = BinarySearchTree(5)
+bst = BinarySearchTree(25)
 
-bst.insert(2)
+bst.insert(3)
+bst.insert(11)
+bst.insert(50)
+bst.insert(23)
 bst.insert(7)
-bst.insert(4)
-bst.insert(6)
+bst.insert(21)
 
-print(bst.contains(4))
-print(bst.contains(10))
+print(bst.contains(11))
+print(bst.contains(23))
