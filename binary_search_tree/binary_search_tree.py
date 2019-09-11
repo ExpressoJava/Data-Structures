@@ -84,4 +84,4 @@ bst.insert(7)
 bst.insert(21)
 
 print(bst.contains(11))
-print(bst.contains(23))
+print(bst.contains(27))

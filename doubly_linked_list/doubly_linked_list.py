@@ -64,12 +64,20 @@ class DoublyLinkedList:
     """
 
     def add_to_head(self, value):
-        current_head = self.head
-        if not current_head:
-            self.head = ListNode(value)
+        # current_head = self.head
+        # if not current_head:
+        #     self.head = ListNode(value)
+        # else:
+        #     current_head.insert_before(value)
+        #     self.head = current_head.prev
+        if self.head is None:
+            node = ListNode(value)
+            self.tail = node
+            self.head = node
         else:
-            current_head.insert_before(value)
-            self.head = current_head.prev
+            current_node = self.head
+            current_node.insert_before(value)
+            self.head = current_node.prev
 
     """
     Removes the List's current head node, making the
@@ -99,7 +107,7 @@ class DoublyLinkedList:
             self.tail = new_node
         else:
             current_tail.insert_after(value)
-            self.tail = current_tail.nex
+            self.tail = current_tail.next
 
     """
     Removes the List's current tail node, making the
